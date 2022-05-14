@@ -1,16 +1,21 @@
 body{
-    background: lightblue;
+    background: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
-    background-color: aqua;
+    background-color: royalblue;
     height: 50px;
     line-height: 50px;
+    margin-bottom: 0;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+
 }
 #content{
-    background: lightcyan;
-    min-height: 450px;
+    background-color: royalblue;
+    color: white;
 
 }
 img{
@@ -19,7 +24,7 @@ img{
     height: 350px;
 }
 nav a{
-    margin: 15px;
+    margin: 10px;
     color: white;
     line-height: 40px;
 }
@@ -27,5 +32,4 @@ nav{
     text-align: center;
     background: black;
     height: 10%;
-}
-
+}    
