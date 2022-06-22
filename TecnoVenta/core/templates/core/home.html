@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <title>home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'core/css/prueba1.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container-xxl">
+      <h1 align="center">TecnoVenta</h1>
+    </div> 
+      <nav>
+        <a href="prueba1.html">Inicio</a>
+        <a href="Computadores.html">Computadores</a>
+        <a href="Telefonos.html">Telefonos</a>
+        <a href="Witgets.html">Witgets</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="Carrito Compras.html">Carrito Compras</a>
+      </nav>
+    </div>
+    <div class="container-xxl">
+      <h2 align="center"> Lista de Productos</h2>
+    </div>
+    <div class="container">
+    <table border=2>
+      <tr><td>ID</td><td>Marca</td><td>Precio</td><td>Modelo</td><td>Categoria</td></tr>
+      {% for p in producto %}
+      <tr><td>{{p.idProducto}}</td><td>{{p.marca}}</td><td>{{p.precio}}</td><td>{{p.modelo}}</td><td>{{p.categoria}}</td></tr>
+      {% endfor %}
+    </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
