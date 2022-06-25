@@ -12,4 +12,20 @@ def home(request):
 
     return render(request, 'core/home.html', datos)
 
+    def form_producto(request):
     
+    datos = {
+        'form': ProductoForm()
+
+    }
+    if request.method== 'POST':
+        
+        formulario = ProductoForm(request.POST)
+        
+        if formulario.is_valid:
+        
+            formulario.save()
+        
+            datos['mesaje'] = "Guardados correctamente"
+
+    return render(request, 'core/form.html', datos)
