@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'core',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'TecnoVenta.wsgi.application'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATTION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 
 # Database
@@ -119,6 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'core/static/core/img/'
+MEDIA_ROOT= os.path.join(BASE_DIR, 'core/static/core/img/' )
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'core/static/core'),)
 
