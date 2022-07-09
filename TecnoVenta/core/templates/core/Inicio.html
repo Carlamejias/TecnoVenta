@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <title>home</title>
+    <meta charset="utf-8">
+    <!--BUSQUEDA DIRECTORIO CSS por medio de static-->
+    <link rel="stylesheet" href="{% static 'core/css/prueba1.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container-xxl">
+      <h1 align="center">TecnoVenta</h1>
+    </div> 
+      <nav>
+        <a href='Inicio'>Inicio</a>
+        <a href="Computadores.html">Computadores</a>
+        <a href="Telefonos.html">Telefonos</a>
+        <a href="Witgets.html">Witgets</a>
+        <a href='contacto'>Contacto</a>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href='agregar-producto'>Agregar producto</a>
+      </nav>
+    <br>
+    </div>
+    {% for prod in productos %}
+    <section class="page-section clearfix">
+      <div class="container">
+        <div class="intro">
+          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{prod.imagen.url}}" alt="">
+          <div class="intro-text left-0-center bg-faded p-5 rounded">
+            <h2 class="section-heading mb-4">
+              <spam class="section-heading-upper">{{prod.modelo}}</spam>
+              <spam class="section-heading-lower">{{prod.marca}}</spam>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="contacto.js"></script>
+  </body>
+</html>
