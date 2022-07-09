@@ -38,3 +38,11 @@ def contacto(request, ):
 
     return render(request, "core/Contacto.html",{"form":miFormulario})
 
+def incio(request):
+    productos= Producto.objects.all()
+
+    datos = {
+        'productos': productos
+    }
+
+    return render(request, 'core/Inicio.html', datos)
