@@ -128,6 +128,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER="fabisick@gmail.com"
+EMAIL_HOST_PASSWORD="ZxcV5637"
+
+
 MEDIA_URL = 'core/static/core/img/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'core/static/core/img/' )
 
