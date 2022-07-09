@@ -1,7 +1,17 @@
-from django.urls import URLPattern, path
-from .views import home, form_producto
+from django.urls import path
+from .views import contacto, home, agregar_producto
+from django.conf import settings
+from django.conf.urls.static import static
+from core.viewslogin import login
+
+#Identificador de URL
 urlpatterns =[
-    path('', home,name="home"),
-    path('form-producto', form_producto, name="form_producto"),
-    
+
+    path('', home, name="Home"),
+    path('agregar-producto', agregar_producto, name="agregar_producto"),
+    path('contacto', contacto, name="contacto"),
+    path('login', login, name="login"),
+
 ]
+
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
